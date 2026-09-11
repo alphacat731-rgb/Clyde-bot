@@ -1,0 +1,15 @@
+[Unit]
+Description=Clyde Discord Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_LINUX_USERNAME
+WorkingDirectory=/home/YOUR_LINUX_USERNAME/Clyde-bot
+ExecStart=/home/YOUR_LINUX_USERNAME/Clyde-bot/.venv/bin/python /home/YOUR_LINUX_USERNAME/Clyde-bot/clyde.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
